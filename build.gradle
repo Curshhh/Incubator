@@ -1,0 +1,43 @@
+
+plugins {
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.Incubator'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1'
+    runtimeOnly 'mysql:mysql-connector-java'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // https://mvnrepository.com/artifact/com.mchange/c3p0
+    compile group: 'com.mchange', name: 'c3p0', version: '0.9.5.2'
+    // kaptcha验证码
+    compile group: 'com.github.penggle', name: 'kaptcha', version: '2.3.2'
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.47'
+
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.2'
+
+    // https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java
+    compile group: 'com.alipay.sdk', name: 'alipay-sdk-java', version: '3.7.4.ALL'
+
+    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+
+
+
+}
